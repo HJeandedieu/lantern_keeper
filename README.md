@@ -99,27 +99,48 @@ This turns lantern management into the game's core tension: light is never just 
 
 ## Project Structure
 
-```
+
+````
 Assets/
 │
 ├── Animations/
 ├── Art/
 ├── Audio/
+│   ├── Music/
+│   └── SFX/
+├── Data/                  # ScriptableObjects (lantern tuning, ability configs, enemy stats)
 ├── Materials/
 ├── Prefabs/
-├── Resources/
-├── Scenes/
-├── Scripts/
 │   ├── Player/
 │   ├── Enemies/
-│   ├── Lantern/
-│   ├── Managers/
-│   ├── UI/
+│   ├── Environment/
+│   └── UI/
+├── Resources/              # Runtime-loaded assets only — not a general dumping ground
+├── Scenes/
+├── Scripts/
+│   ├── Core/               # Core.asmdef — engine-agnostic systems, shared utilities
+│   ├── Gameplay/           # Gameplay.asmdef
+│   │   ├── Player/
+│   │   ├── Enemies/
+│   │   ├── Lantern/
+│   │   └── Managers/
+│   ├── UI/                 # UI.asmdef
 │   └── Utilities/
 ├── Shaders/
 ├── Sprites/
+│   ├── Player/
+│   ├── Enemies/
+│   ├── Environment/
+│   └── UI/
 └── UI/
-```
+````
+
+> **Notes:**
+> - `Data/` holds ScriptableObject assets (e.g. lantern energy/drain values, per-ability configs) so gameplay tuning never requires a code change.
+> - `Resources/` is reserved strictly for assets loaded at runtime via `Resources.Load` — everything else lives in its normal folder to avoid bloating build size.
+> - `Scripts/` is split into three assembly definitions (`Core`, `Gameplay`, `UI`) to keep compile times fast as the codebase grows and to enforce clean dependency boundaries between systems.
+> - Binary assets (`Art/`, `Sprites/`, `Audio/`) are tracked with **Git LFS** to keep repository history lean.
+````
 
 <br>
 

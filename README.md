@@ -140,7 +140,6 @@ Assets/
 > - `Resources/` is reserved strictly for assets loaded at runtime via `Resources.Load` — everything else lives in its normal folder to avoid bloating build size.
 > - `Scripts/` is split into three assembly definitions (`Core`, `Gameplay`, `UI`) to keep compile times fast as the codebase grows and to enforce clean dependency boundaries between systems.
 > - Binary assets (`Art/`, `Sprites/`, `Audio/`) are tracked with **Git LFS** to keep repository history lean.
-````
 
 <br>
 

@@ -36,7 +36,7 @@
 
 **The Last Lantern Keeper** is a 2D story-driven adventure platformer built in **Unity 6**. A mysterious darkness has extinguished the ancient lighthouses that once protected the kingdom, allowing shadow creatures to spread across the land.
 
-You play as **Elara**, the last surviving Lantern Keeper. Armed with a magical lantern — your only tool, your only weapon, and your only real protection — your objective is to journey across the kingdom, relight the ancient lighthouses, and restore light to a world that has forgotten what it feels like.
+You play as a young adventurer whose name is chosen by the player, the last surviving Lantern Keeper. Armed with a magical lantern—your only tool, your only weapon, and your only true protection—you must journey across the kingdom, relight the ancient lighthouses, and restore light to a world that has long been consumed by darkness.
 
 The game combines exploration, environmental puzzle-solving, platforming, and a signature light-vs-shadow survival mechanic into a single, cohesive experience built around one idea: **light is life.**
 
